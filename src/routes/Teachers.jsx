@@ -71,7 +71,7 @@ const Teachers = () => {
                   <IconButton component={Link} to={`${id}/edit`} color="warning">
                     <EditTwoToneIcon />
                   </IconButton>
-                  <IconButton color="error">
+                  <IconButton component={Link} to={`${id}/delete`} color="error">
                     <DeleteTwoToneIcon />
                   </IconButton>
                 </Box>

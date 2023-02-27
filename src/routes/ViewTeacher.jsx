@@ -14,7 +14,7 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogActions from '@mui/material/DialogActions';
 import EditTwoToneIcon from '@mui/icons-material/EditTwoTone';
 
-import {useNavigate,useLoaderData} from "react-router-dom"
+import {useNavigate,useLoaderData, Link} from "react-router-dom"
 
 
 export const loader= async({params})=>{
@@ -45,7 +45,7 @@ const ViewTeacher = () => {
           justifyContent="space-between"
         >
           <Typography variant="h6">View Teacher Profile</Typography>
-          <IconButton color="secondary">
+          <IconButton component={Link} to="../edit" relative="path" replace color="secondary">
             <EditTwoToneIcon />
           </IconButton>
         </Stack>
@@ -65,7 +65,7 @@ const ViewTeacher = () => {
       </DialogContent>
       <DialogActions>
         <Button onClick={handleClose}>Close</Button>
-        <Button color="error">Delete</Button>
+        <Button color="error"  component={Link} to="../delete" relative="path" replace >Delete</Button>
       </DialogActions>
     </Dialog>
   );

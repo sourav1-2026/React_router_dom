@@ -26,6 +26,8 @@ import EditTeacher,{
   action as EditTeacherAction,
 } from './routes/edit-teacher';
 
+import DeleteTeacher,{action as DeleteTeacherAction,} from './routes/delete-teacher';
+
 const theme=createTheme({
   palette:{
     primary: deepPurple,
@@ -66,6 +68,11 @@ const router = createBrowserRouter([
               loader : EditTeacherLoader,
               action: EditTeacherAction,
             },
+            {
+              path : ':id/delete',
+              element: <DeleteTeacher></DeleteTeacher>,
+              action : DeleteTeacherAction
+            }
           ]
         }
       ],
