@@ -21,6 +21,10 @@ import ViewTeacher,{loader as ViewTeacherLoader} from './routes/ViewTeacher';
 import CreateTeacher, {
   action as CreateTeacherAction,
 }  from './routes/CreateTeacher';
+import EditTeacher,{
+  loader as EditTeacherLoader,
+  action as EditTeacherAction,
+} from './routes/edit-teacher';
 
 const theme=createTheme({
   palette:{
@@ -55,7 +59,13 @@ const router = createBrowserRouter([
               element: <CreateTeacher></CreateTeacher>,
               action: CreateTeacherAction,
                 
-            }
+            },
+            {
+              path: ':id/edit',
+              element: <EditTeacher></EditTeacher>,
+              loader : EditTeacherLoader,
+              action: EditTeacherAction,
+            },
           ]
         }
       ],

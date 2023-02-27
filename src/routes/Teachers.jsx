@@ -68,7 +68,7 @@ const Teachers = () => {
                   </Typography>
                 </Box>
                 <Box>
-                  <IconButton color="warning">
+                  <IconButton component={Link} to={`${id}/edit`} color="warning">
                     <EditTwoToneIcon />
                   </IconButton>
                   <IconButton color="error">
